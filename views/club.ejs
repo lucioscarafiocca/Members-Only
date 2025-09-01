@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Join the club</h3>
+    <% if (locals.error) { %>
+    <ul>
+      <li><%= error %></li>
+    </ul>
+    <% } %>
+    <form action="/club" method="post">
+      <label for="password">Type secret passcode </label>
+      <input type="text" name="password" id="password" />
+      <button>Confirm</button>
+    </form>
+  </body>
+</html>

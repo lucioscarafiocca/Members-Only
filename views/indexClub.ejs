@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/new/message" method="get">
+      <button>New Message</button>
+    </form>
+    <h3>Welcome to the treehouse!</h3>
+    <% messages.forEach(msg => { %>
+    <ul>
+      <li><%= msg.fullname%></li>
+      <li><%= msg.timestamp%></li>
+      <li><%= msg.title %></li>
+      <li><%= msg.text %></li>
+      <%- include('./partials/delete', {msg: msg}) %>
+    </ul>
+    <% }) %>
+    <a href="/log-out">Log Out</a>
+  </body>
+</html>

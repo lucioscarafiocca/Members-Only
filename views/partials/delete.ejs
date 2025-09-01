@@ -1,0 +1,6 @@
+<% if (locals.user.admin == true) { %>
+<form action="/delete" method="post">
+  <input type="text" name="id" id="id" value="<%= msg.id %>" hidden />
+  <button>Delete</button>
+</form>
+<% } %>

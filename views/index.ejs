@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Welcome to the treehouse!</h3>
+    <% messages.forEach(msg => { %>
+    <ul>
+      <li><%= msg.title %></li>
+      <li><%= msg.text %></li>
+    </ul>
+    <% }) %>
+    <a href="/sign-up">Sign up!</a>
+    <a href="/log-in">Log in!</a>
+  </body>
+</html>

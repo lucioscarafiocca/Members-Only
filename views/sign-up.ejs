@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Create a user!</h3>
+    <% if (locals.errors) { %> <%- include("./partials/errors", {errors:
+    errors}) %> <% } %>
+
+    <form action="/sign-up" method="post">
+      <label for="username">Username</label>
+      <input
+        type="email"
+        name="username"
+        id="username"
+        value="<%= values.username %>"
+        required
+      />
+      <label for="password">Password: </label>
+      <input
+        type="text"
+        name="password"
+        id="password"
+        value="<%= values.password %>"
+        required
+      />
+      <label for="passwordConfirmation">Repeat password: </label>
+      <input
+        type="text"
+        name="passwordConfirmation"
+        id="passwordConfirmation"
+        value="<%= values.passwordConfirmation%>"
+        required
+      />
+      <label for="firstName">Name: </label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        value="<%= values.firstName %>"
+        required
+      />
+      <label for="lastName">Last name: </label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        value="<%= values.lastName%>"
+        required
+      />
+      <label for="admin">isAdmin</label>
+      <input type="checkbox" name="admin" id="admin" />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

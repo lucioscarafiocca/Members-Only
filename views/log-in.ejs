@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/log-in" method="post">
+      <label for="username">Username: </label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        value="<%= values.username %>"
+        required
+      />
+      <label for="password">Password:</label>
+      <input
+        type="text"
+        name="password"
+        id="password"
+        value="<%= values.passowrd %>"
+        required
+      />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
